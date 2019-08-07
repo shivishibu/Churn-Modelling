@@ -5,7 +5,7 @@ import pandas as pd
 
 
 dataset = pd.read_csv('Churn_Modelling.csv')
-X = dataset.iloc[:, 3:13].values#since upperbound is excluded
+X = dataset.iloc[:, 3:13].values
 y = dataset.iloc[:, 13].values
 
 
@@ -43,11 +43,9 @@ classifier.add(Dense(units = 6, kernel_initializer = 'uniform', activation = 're
 
 classifier.add(Dense(units = 6, kernel_initializer = 'uniform', activation = 'relu'))
 
-classifier.add(Dense(units = 1, kernel_initializer = 'uniform', activation = 'sigmoid'))#if categorical data then see video for activation 
+classifier.add(Dense(units = 1, kernel_initializer = 'uniform', activation = 'sigmoid'))
 
-
-classifier.compile(optimizer = 'adam', loss = 'binary_crossentropy', metrics = ['accuracy'])#if categorical data then see video for loss funtion
-
+classifier.compile(optimizer = 'adam', loss = 'binary_crossentropy', metrics = ['accuracy'])
 
 classifier.fit(X_train, y_train, batch_size = 10, epochs = 100)
 
