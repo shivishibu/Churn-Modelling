@@ -32,8 +32,8 @@ X_test = sc.transform(X_test)
 
 
 import keras
-from keras.models import Sequential#to initialise our NN
-from keras.layers import Dense#to build layers of our ANN
+from keras.models import Sequential
+from keras.layers import Dense
 
 
 classifier = Sequential()
